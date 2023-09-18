@@ -1,0 +1,4 @@
+# Ignore useless files
+.local
+.settings
+.tmh
