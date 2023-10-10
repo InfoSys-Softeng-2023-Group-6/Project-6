@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1188,5415</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1188,5602</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>main_sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -82,10 +82,9 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main_sequence" sap:VirtualizedContainerService.HintSize="1073,5350" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="main_sequence" sap:VirtualizedContainerService.HintSize="1073,5537" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="company_name_enum" />
       <Variable x:TypeArguments="sd:DataTable" Name="company_dt" />
@@ -96,39 +95,41 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1031,74" sap2010:WorkflowViewState.IdRef="Comment_11" Text="Create datatable to store company information and automation report" />
     <ui:BuildDataTable DataTable="[company_dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1031,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Company_x0020_Name&quot; msdata:Caption=&quot;&quot; default=&quot;N/A&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Address_x0020__x0028_Registered_x0020_Office_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;N/A&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Company_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;N/A&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NZBN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;N/A&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Incorporation_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;N/A&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Company_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;N/A&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Industry_x0020_Codes&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Time_x0020_recorded&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BuildDataTable DataTable="[automation_report]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1031,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Error_description&quot; msdata:Caption=&quot;&quot; default=&quot;N/A&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:Comment sap:VirtualizedContainerService.HintSize="1031,55" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Check if company list file exists" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1031,4965" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1031,5038" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="993,4738" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="993,4811" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="951,2185" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="..\company_list.xlsx">
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="951,2239" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="..\company_list.xlsx">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="917,2076" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="917,2130" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="875,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Retrieving company name from company_list.xlsx &quot;]" />
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="875,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Get the list of company names from the excel file&#xA;" />
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="875,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Retrieve company names from excel file&#xA;" />
                   <ui:ExcelReadColumn DisplayName="Read Column" sap:VirtualizedContainerService.HintSize="875,59" sap2010:WorkflowViewState.IdRef="ExcelReadColumn_1" Result="[company_name_enum]" SheetName="Sheet1" StartingCell="A2" />
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="875,1640" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[company_name_enum]">
+                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="875,1713" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[company_name_enum]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="839,1517" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="839,1590" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="current_company_name" />
                             <Variable x:TypeArguments="x:String" Name="main_output" />
@@ -160,8 +161,8 @@
                               <OutArgument x:TypeArguments="x:String" x:Key="error_description">[company_error_description]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <ui:Comment sap:VirtualizedContainerService.HintSize="797,112" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Check if company number were found from previous sequence&#xA;if not then skip to next company else proceed into opencorporate scraper" />
-                          <If Condition="[company_number is Nothing]" sap:VirtualizedContainerService.HintSize="797,812" sap2010:WorkflowViewState.IdRef="If_1">
+                          <ui:Comment sap:VirtualizedContainerService.HintSize="797,93" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Check if company number exists&#xA;if not then skip to next company else proceed with opencorporates scraper" />
+                          <If Condition="[company_number is Nothing]" sap:VirtualizedContainerService.HintSize="797,904" sap2010:WorkflowViewState.IdRef="If_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -169,13 +170,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,633" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,747" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_12" Text="Company not able to find so we add error to error report and N/A to all the columns" />
                                 <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{current_company_name, &quot;N/A&quot;, &quot;N/A&quot;, &quot;N/A&quot;, &quot;N/A&quot;, &quot;N/A&quot;,&quot;N/A&quot; ,Now}]" DataTable="[company_dt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
                                 <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{company_error_description}]" DataTable="[automation_report]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Continue to the next company&quot;]" />
@@ -224,7 +226,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExcelApplicationScope>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="951,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Company data extraction completed &quot;]" />
-          <ui:Comment sap:VirtualizedContainerService.HintSize="951,55" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Write all company data to excel&#xA;" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="951,74" sap2010:WorkflowViewState.IdRef="Comment_5" Text="It creates an excel file with today date and write all company data to the file.&#xA;" />
           <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="951,2195" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[String.format(&quot;../company_information-{0} .xlsx&quot;, Now.ToString(&quot;dd-MM-yyyy&quot;))]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">

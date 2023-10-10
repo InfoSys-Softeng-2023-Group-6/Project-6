@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1188,4899</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1188,4975</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>companies_office_scraper_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,7 +91,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="companies_office_scraper" sap:VirtualizedContainerService.HintSize="676,4834" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="companies_office_scraper" sap:VirtualizedContainerService.HintSize="676,4910" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="search_results" />
       <Variable x:TypeArguments="sd:DataTable" Name="companies_office_output" />
@@ -103,7 +103,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="634,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[String.format(&quot;Start scraping {0} data from companies_office &quot;, company_name )]" />
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,4611" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,4687" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="variable1" />
       </Sequence.Variables>
@@ -113,7 +113,8 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="592,131" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Catch error if company cannot be found.  You cannot move your cursor while running the application otherwise it will raise an error and ask if you want to restart the sequence or continue to the next sequence" />
+      <ui:Comment sap:VirtualizedContainerService.HintSize="592,55" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Catch error if company cannot be found.  " />
+      <ui:Comment sap:VirtualizedContainerService.HintSize="592,112" sap2010:WorkflowViewState.IdRef="Comment_6" Text="You cannot move your cursor while running the application otherwise it will raise an error and ask if you want to restart the sequence or continue to the next sequence" />
       <ui:InterruptibleWhile Condition="[search_status &lt;&gt; &quot;continue to next sequence&quot;]" DisplayName="While" sap:VirtualizedContainerService.HintSize="592,4348" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
         <ui:InterruptibleWhile.Body>
           <Sequence sap:VirtualizedContainerService.HintSize="556,4183" sap2010:WorkflowViewState.IdRef="Sequence_6">
