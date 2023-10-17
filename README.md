@@ -4,7 +4,7 @@
 This UiPath project automates the scraping of company data from the 'Companies Office' and 'OpenCorporates' websites. An overview of the project architecture can be found below
 
 
-![implementation-architecture](https://github.com/InfoSys-Softeng-2023-Group-6/Project-6/assets/68930603/0f0ea871-81cf-4ee0-bb6f-a6e1d63b33f4)
+![implementation-architecture](https://github.com/InfoSys-Softeng-2023-Group-6/Project-6/assets/68930603/ec9d9d0f-1306-459c-890e-175b216f010e)
 
 
 ## 2. Prerequisites:
